@@ -1,0 +1,144 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.list-group-item {
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 10px;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.list-group-item.selected {
+    background-color: #e9ecef;
+}
+
+.list-group-item .badge {
+    font-size: 0.9em;
+    padding: 0.5em 1em;
+}
+
+.list-group-item-success {
+    background-color: #d1e7dd !important;
+    border-color: #badbcc !important;
+}
+
+#shopping-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#shopping-list .list-group-item {
+    transition: background-color 0.2s;
+}
+
+#shopping-list .list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+#store-comparison .list-group-item {
+    margin-bottom: 5px;
+}
+
+#store-comparison .badge {
+    font-size: 1em;
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    color: #0f5132;
+}
+
+.store-comparison-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.store-comparison-item:last-child {
+    border-bottom: none;
+}
+
+.cheapest-store {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.btn-outline-danger {
+    padding: 0.25rem 0.5rem;
+    line-height: 1;
+}
+
+#add-ingredient {
+    margin-top: 0.5rem;
+}
+
+/* Search Results Styles */
+#search-results .list-group-item {
+    padding: 1.5rem;
+}
+
+#search-results h6 {
+    color: #0d6efd;
+}
+
+#search-results ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#search-results ul li {
+    padding: 0.25rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+#search-results ul li:last-child {
+    border-bottom: none;
+}
+
+#search-results .instructions {
+    white-space: pre-line;
+    margin-top: 1rem;
+}
+
+/* Loading Spinner */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+.delete-recipe {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.delete-recipe:hover {
+    opacity: 1;
+}
+
+.list-group-item:hover .delete-recipe {
+    opacity: 1;
+}
+
+.navbar .text-light em {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 1.1em;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+} 

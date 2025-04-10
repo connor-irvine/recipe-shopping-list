@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Shopping List - UK</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Recipe Shopping List</a>
+            <div class="ms-auto text-light">
+                <em>Open Source is Art</em>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Recipe Search -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Search Recipes</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="search-form" class="d-flex">
+                            <input type="text" class="form-control me-2" id="search-query" placeholder="Search for recipes (e.g., 'vegetarian pasta', 'quick dinner')" required>
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </form>
+                        <div id="search-results" class="mt-3">
+                            <!-- Search results will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Recipe Selection -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Select Recipes</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="recipe-list" class="list-group">
+                            <!-- Recipes will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shopping List -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Shopping List</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="postcode" class="form-label">Find nearest shops:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="postcode" placeholder="Enter your postcode (e.g., SW1A 1AA)">
+                                <button class="btn btn-outline-primary" type="button" id="find-stores">Find Shops</button>
+                            </div>
+                        </div>
+                        <div id="shopping-list">
+                            <!-- Shopping list will be displayed here -->
+                        </div>
+                        <div id="store-comparison" class="mt-3">
+                            <!-- Store comparison will be shown here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Recipe Form -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Add New Recipe</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="recipe-form">
+                            <div class="mb-3">
+                                <label for="recipe-name" class="form-label">Recipe Name</label>
+                                <input type="text" class="form-control" id="recipe-name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ingredients" class="form-label">Ingredients</label>
+                                <div id="ingredients-list">
+                                    <div class="input-group mb-2">
+                                        <input type="text" class="form-control ingredient-name" placeholder="Ingredient name">
+                                        <input type="number" class="form-control ingredient-amount" placeholder="Amount">
+                                        <button type="button" class="btn btn-outline-danger remove-ingredient">×</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-outline-primary" id="add-ingredient">Add Ingredient</button>
+                            </div>
+                            <div class="mb-3">
+                                <label for="instructions" class="form-label">Instructions</label>
+                                <textarea class="form-control" id="instructions" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Recipe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
